@@ -8,6 +8,7 @@ body {
     font-family: "Tajawal-Regular";
     direction: rtl;
     text-align: right;
+    overflow-y: scroll;
 }
 
 @font-face {
@@ -115,7 +116,9 @@ header .reqBtn {
     margin-left: 44px;
 
 }
-
+.nav-active {
+    color: #F2DF3A;
+}
 .nav-item {
     position: relative;
 }
@@ -167,7 +170,7 @@ header .reqBtn {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .heroContent {
@@ -248,6 +251,7 @@ header .reqBtn {
 
 .sectionTitle {
     text-align: center;
+	margin-bottom:10%;
 }
 
 /****************************************/
@@ -270,6 +274,7 @@ header .reqBtn {
 }
 
 .sampleImg img {
+	    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -281,9 +286,10 @@ header .reqBtn {
 
 .sampleDetails h6 {
     font-size: 1.5em;
-    line-height: 2;
+    line-height: 1.2em;
     margin-bottom: 19px;
     max-width: 80%;
+	margin-top: 2%;
 }
 
 .sampleDetails p {
@@ -354,24 +360,25 @@ header .reqBtn {
     object-fit: cover;
 }
 
-.owl-item.center .galleryItem {
+/*.owl-item.center .galleryItem {
     transform: scale(1.1);
     transition: all .5s;
     ;
-}
+}*/
 
 .Gallery .owl-dots {
     position: relative;
-    width: 57%;
+    width: 100%;
     margin: auto;
-    background-color: rgba(245, 245, 245, .5);
-    margin-top: 200px
+    margin-top: 200px;
+    text-align: center;
 }
 
 .Gallery .owl-dots .owl-dot {
     width: 189px;
     height: 2px;
-
+    background-color: rgba(245, 245, 245, .5);
+    margin:0
 }
 
 .Gallery .owl-dots .owl-dot.active {
@@ -436,6 +443,27 @@ header .reqBtn {
 }
 
 /*******************************************/
+
+
+.featuresSlider  .owl-nav {
+    position: absolute;
+    top: 42%;
+    width: 100%;
+}
+
+.featuresSlider .owl-next {
+    right: 530px;
+    position: absolute;
+    margin: 0;
+}
+
+.featuresSlider .owl-prev {
+    left: 565px;
+    position: absolute;
+    margin: 0;
+}
+
+/********************************/
 .ourClients {
     padding: 75px 0;
 
@@ -562,7 +590,6 @@ header .reqBtn {
 
 .locationLabel span {
     align-self: center;
-    margin-top: 17px;
     font-size: 1em;
     font-family: "Tajawal-Medium";
     margin: 0;
@@ -576,7 +603,7 @@ header .reqBtn {
 }
 
 .ourLocation .sectionTitle {
-    margin-bottom: 65px;
+       margin-bottom: 65px;
 }
 
 .googlemap {
@@ -593,7 +620,7 @@ header .reqBtn {
     position: absolute;
     content: "";
     width: 100%;
-    height: 262px;
+    height: 100%;
     bottom: 0;
     left: 0;
     background-color: #222326;
@@ -623,7 +650,8 @@ header .reqBtn {
 }
 
 .ContactList {
-    margin-top: 30px
+    margin-top: 30px;
+	justify-content: space-around;
 }
 
 .ContactList li {
@@ -682,6 +710,7 @@ header .reqBtn {
     box-shadow: 0 50px 50px rgba(0, 0, 0, .05);
     border: 1px solid #313236;
     background-color: transparent;
+    color:white
 }
 
 .contactForm .form-group {
@@ -723,14 +752,15 @@ header .reqBtn {
 }
 
 footer {
-    padding: 130px 0 101px;
+    padding: 40px 0 40px;
     position: relative;
     z-index: 1;
     background-color: #151515;
+	text-align:center;
 }
 
 .footerLogo {
-    width: 124px;
+   /* width: 124px;*/
     margin-bottom: 30px;
 }
 
@@ -773,6 +803,9 @@ footer {
     font-size: 1em;
 }
 
+.policy a:hover{
+	color:white;
+}
 /**********************************************/
 .basics {
     background-color: #222326;
@@ -923,7 +956,7 @@ footer {
     position: absolute;
     top: 124px;
     width: 850px;
-    left: -36%;
+    left: -42%;
 }
 
 .ourTeam .sectionTitle span {
@@ -995,13 +1028,13 @@ footer {
 }
 
 .aboutHero {
-    padding-top: 112px;
+    padding-top: 212px;
     padding-bottom: 30px;
 }
 
 .aboutHero h1 {
     font-size: 2.375em;
-    max-width: 70%;
+    max-width: 60%;
 }
 
 .aboutHero h6 {
@@ -1020,10 +1053,15 @@ footer {
 
 .ourTeambg2 {
     position: absolute;
-    right: -30%;
-    top: 50%
+    right: -28%;
+    top: 24%;
 }
-
+.navbar-brand{
+    margin-right: 0;
+}
+.navbar {
+    padding:20px 0
+}
 /*********************************/
 .OurProductHero {
     position: relative;
@@ -1045,6 +1083,9 @@ footer {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 68%);
 }
 
+.productHeroText{
+    padding-top:130px
+}
 .productHeroText h4 {
     font-weight: 500;
     margin-bottom: 20px;
@@ -1061,12 +1102,15 @@ footer {
 .productHeroImg {
     position: absolute;
     left: 0;
-    top: 160px;
-    width: 560px;
+    top: 0;
+    width: 550px;
     height: 400px;
     z-index: 2;
 }
 
+.reportFeatures{
+    background: linear-gradient(126deg, rgba(49, 50, 54, 0) 0%, rgba(49, 50, 54, 0.6) 100%);
+}
 .productHeroImg img {
     width: 100%;
     height: 100%;
@@ -1074,7 +1118,7 @@ footer {
 }
 
 .overview {
-    padding-top: 100px;
+    padding-top: 60px;
     position: relative;
     z-index: 0;
 }
@@ -1102,7 +1146,7 @@ footer {
     border-radius: 32px;
 
     background-size: 100% 100%;
-    object-fit: cover;
+    object-fit: contain;
     position: relative;
 }
 
@@ -1113,8 +1157,8 @@ footer {
     border-radius: 50%;
     background-color: rgba(21, 21, 21, .6);
     z-index: 8888;
-    top: 45%;
-    left: 45%;
+    top: 43%;
+    left: 48%;
     font-size: 29px;
     color: #F2DF3A
 }
@@ -1197,26 +1241,29 @@ footer {
     border-radius: 8px;
     height: 60px;
     font-size: 1em;
-    color: #5A7184
+    color: #5A7184;
+    display: block;
+    padding:18px
 }
-
+.featuresLabel i{
+    margin: 0;
+    color:black
+}
 .featuresLabel p {
     font-family: 'Rubik', sans-serif;
     display: inline-block;
     margin-right: 10px;
-
 }
 
-.iconcont {
+.featuresLabel .iconcont {
     width: 24px;
     height: 24px;
     display: inline-flex;
     background-color: #F2DF3A;
     border-radius: 50%;
-    ;
-    margin-left: 25px;
     justify-content: center;
-    color: #151515
+    color: #151515;
+    margin-left:25px
 }
 
 .showMoreBtn {
@@ -1239,29 +1286,27 @@ footer {
     text-align: right;
     height: 340px;
     position: relative;
-    overflow: hidden;
     margin-top: -85px;
     padding-top: 135px;
     padding-bottom: 38px;
-
     box-shadow: 0 19px 20px rgba(21, 21, 21, .06);
+    clip-path: polygon(87% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+    display: flex;
+    flex-direction: column;
 }
 
-.corner {
+.corner{
+    content: "";
+    background-color: #F2DF3A;
     width: 127px;
     height: 127px;
-    background-color: #F2DF3A;
-    top: -67px;
-    right: -98px;
+    border-radius: 18px;
+    overflow: hidden;
     position: absolute;
-    transform: rotate(234deg);
-    z-index: 22;
+    right: 22px;
+    top: 91px;
+    z-index: 0;
 }
-
-.ourProdBox:hover .corner {
-    background-color: #151515;
-}
-
 .ourProdBox h5 {
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
@@ -1272,7 +1317,7 @@ footer {
 .ourProdBox span {
     color: #F2DF3A;
     display: block;
-    margin-top: 44px;
+    margin-top: auto;
 }
 
 .ourProdBox span a {
@@ -1435,9 +1480,50 @@ footer {
     border-radius: 5px;
 }
 
-
-
+.scrollNav {
+    top: 0 !important;
+    z-index: 555;
+    animation-duration: .5s;
+    background: #151515;
+    position: fixed !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 20px 3px;
+    transition: 1s all;
+    left: 0;
+    width:100%;
+    right:0;
+    padding:10px 0;
+    transition: all .5s;;
+    animation:sticky;
+    width:100%;
+}
+.close{
+    display: none;
+}
+.contactPageCont{
+    padding-top: 150px;
+}
 @media (max-width: 850px) {
+	.map_padding{
+		    padding-right: 15px !important;
+    padding-left: 15px !important;
+	}
+    .navbar-collapse{
+        background-color: #151515;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        margin: 0;
+        right: 0;
+        padding: 20px;
+    }
+     .navbar-collapse .close{
+        float: left;
+        opacity: 1;
+        color: white;
+    }
+    
+    
     body {
         font-size: 14px;
     }
@@ -1480,7 +1566,9 @@ footer {
     }
 
     .hero {
-        height: 660px;
+        height: 711px;
+        padding-top: 46px;
+    
 
     }
 
@@ -1488,6 +1576,7 @@ footer {
         width: 100%;
         height: auto;
         margin-bottom: 20px;
+		margin-top: 25px;
     }
 
     .sampleImg img {
@@ -1498,6 +1587,11 @@ footer {
     .galleryCar .owl-nav {
         top: auto;
         bottom: -44px;
+    }
+	
+.featuresSlider .owl-nav {
+        top: auto;
+        bottom: -45px;
     }
 
     .GalleryDetails {
@@ -1525,9 +1619,7 @@ footer {
     .ourTeambg2{
         display: none;
     }
-    .aboutHero{
-        padding-top:150px
-    }
+
     .memberBox{
        margin-bottom: 70px;
     }
@@ -1554,6 +1646,9 @@ footer {
         top:auto;
         margin:20px auto
     }
+    .OurProductHero{
+        padding-bottom: 95px;
+    }
     .OurProductHero:before{
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 88%);
     }
@@ -1569,21 +1664,56 @@ footer {
     .overviewVideoContainer{
         height: auto;
     }
-    .scrollNav {
-        top: 0 !important;
-        z-index: 555;
-        animation-duration: .5s;
-        background: #272B4B;
-        position: fixed !important;
-        box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 20px 3px;
-        transition: 1s all;
-        left: 0;
-        width:100%;
-        right:0;
-        padding:10px 0;
-        transition: all .5s;;
-        animation:sticky;
-    }
+.contactUsPage {
+    padding-top:200px
+}
+header{
+    height: auto;
+}
+.aboutHero h1{
+    max-width: 100%;;
+    font-size: 2em;
+}
+.showoverviewVideoBtn{
+    top: 31%;
+    left: 36%;
+}
+.Gallery .owl-dots {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background-color:transparent;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.Gallery .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin:10px;
+    background-color: #5A7184;
+
+}
+
+.Gallery .owl-dots .owl-dot.active {
+    background-color: #F2DF3A;
+}
+.reportFeatures{
+    padding-bottom: 80px;
+}
+.oursamplesSec{
+    padding-bottom: 50px;
+}
+.socialIcons{
+    margin-bottom: 30px;
+}
+.ourTeam{
+    padding: 30px 0;
+}
+.contactPageCont{
+    padding-top:200px
+}
 }
 @media(min-width:800px ) and (max-width:1020px) {
     .navbar-expand-lg .navbar-collapse {
@@ -1593,6 +1723,8 @@ footer {
         flex-basis: auto;
         -ms-flex-direction: row;
         flex-direction: row;
+        background-color: transparent;
+        top: auto;
     }
 
     .navbar-toggler {
@@ -1612,6 +1744,7 @@ footer {
     header .reqBtn {
         width: 130px;
         margin-right: auto;
+		z-index:444444444;
 
     }
 
@@ -1622,3 +1755,14 @@ footer {
         top:105px
     }
 }
+.heroVideo {object-fit:cover !important}
+.policy{
+	    margin-top: 4%;
+	margin-bottom:3%;
+	color: #F2DF3A;
+}
+
+.copyright{
+	margin:0;font-size: 12px;
+}
+

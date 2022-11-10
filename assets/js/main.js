@@ -1,9 +1,22 @@
 jQuery(function ($) {
+    $(".featuresSlider").owlCarousel({
+        nav: true,
+        loop: true,
+        dots: false,
+        center: true,
+		autoplay:true,
+        items: 1,
+        margin: 20,
+        stagePadding:0,
+        rtl: true,
+		navText: ['<i class="fa fa-chevron-right"></i>', '<i class="fa fa-chevron-left"></i>'],
 
+        
+    });
     $(".galleryCar").owlCarousel({
         nav: true,
         loop: true,
-        dots: true,
+        dots: false,
         center: true,
         items: 1,
         navText: ['<i class="fa fa-chevron-right"></i>', '<i class="fa fa-chevron-left"></i>'],
@@ -43,16 +56,20 @@ $(window).scroll(function () {
 //add fix header when scroll down and remove when back up
     if (scrollTop > $('header').height()) {
       $('header').addClass('scrollNav');
-
-
     }
 
     else {
       $('header').removeClass('scrollNav');
     }
-
   });
+  $(".close").click(function(){
+    $(this).parent().removeClass("show")
+  })
 
+  $('.navbar-collapse ul li a').on('click', function () {
+    $('html, body').animate({ scrollTop: $(this.hash).offset().top - 100 }, 1000);
+    return false;
+});
 
 });
 
