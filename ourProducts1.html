@@ -495,15 +495,21 @@
 
             }
         }
+        
         video.on('play', function () {
-            btn.css("display", "none")
+            btn.css("display", "none");
         });
-        video.on('mouseover', function () {
-            btn.css("display", "flex")
-        });
-        video.on('mouseout', function () {
-            btn.css("display", "none")
-        });
+        video.hover(function() {
+            if (btn.show()) {
+                btn.css("display", "none");
+            }
+            else {
+                btn.css("display", "flex")
+            }
+
+        })
+
+ 
     </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
     <script>
