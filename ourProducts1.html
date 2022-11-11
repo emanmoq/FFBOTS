@@ -488,26 +488,26 @@
         function myFunction() {
             if (video.get(0).paused) {
                 video.get(0).play();
-                btn.html('<span><i class="fa-solid fa-pause"></i></span>')
+                btn.html('<span><i class="fa-solid fa-pause"></i></span>');
+                $(this).addClass("played");
+                btn.css("display", "none");
             } else {
                 video.get(0).pause();
                 btn.html('<span><i class="fa-solid fa-play"></i></span>')
+                $(this).Removelass("played");
+                btn.css("display", "none");
 
             }
         }
         
-        video.on('play', function () {
-            btn.css("display", "none");
-        });
-        video.hover(function() {
-            if (btn.show()) {
-                btn.css("display", "none");
-            }
-            else {
-                btn.css("display", "flex")
-            }
-
+   
+            video.hover(function() {
+                    btn.css("display", "flex");
+        
         })
+        
+        
+ 
 
  
     </script>
